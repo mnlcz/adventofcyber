@@ -1,4 +1,4 @@
-# Advent of Cyber Day 1: Machine learning
+# Advent of Cyber Día 1: Machine learning
 
 ## Introducción
 
