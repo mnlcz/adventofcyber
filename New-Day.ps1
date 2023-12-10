@@ -26,6 +26,8 @@ $MdTemplate = @"
 ## Objetivos de aprendizaje
 
 ## Resolución
+
+### [Volver a inicio](../../README.md)
 "@
 
 Add-Content -Path "$DayDir/day$Day.md" -Value $MdTemplate -Encoding utf8
