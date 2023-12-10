@@ -111,3 +111,5 @@ Donde:
 ### Respuestas
 
 Luego de ejecutar hydra obtuvimos el valor del PIN: **6F5**. Y el valor de la flag es: **THM{pin-code-brute-force}**.
+
+### [Volver a inicio](../../README.md)

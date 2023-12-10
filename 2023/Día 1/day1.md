@@ -77,3 +77,5 @@ Gracias a los ataques realizados obtuvimos la siguiente información:
 | McGreedy's email   | <t.mcgreedy@antarcticrafts.thm> |
 | IT server password | **BtY2S02** |
 | Secret project     | **Purple Snow** |
+
+### [Volver a inicio](../../README.md)
