@@ -15,3 +15,4 @@ A partir de la siguiente tabla se puede ir viendo los apuntes:
 | [Día 1](2023/Día%201/day1.md) |
 | [Día 2](2023/Día%202/day2.md) |
 | [Día 3](2023/Día%203/day3.md) |
+| [Día 4](2023/Día%204/day4.md) |
