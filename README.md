@@ -10,9 +10,12 @@ Los apuntes están (o eso intento) divididos en un apartado de introducción, ot
 
 A partir de la siguiente tabla se puede ir viendo los apuntes:
 
-| 2023                      |
-| :------------------------ |
+| 2023                          |
+| :---------------------------- |
 | [Día 1](2023/Día%201/day1.md) |
 | [Día 2](2023/Día%202/day2.md) |
 | [Día 3](2023/Día%203/day3.md) |
 | [Día 4](2023/Día%204/day4.md) |
+| [Día 5](2023/Día%205/day5.md) |
+| [Día 6](2023/Día%206/day6.md) |
+| [Día 7](2023/Día%207/day7.md) |
