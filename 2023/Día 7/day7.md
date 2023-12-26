@@ -35,7 +35,7 @@ A continuación se ven algunos ejemplos de actividades maliciosas que pueden enc
 
 Sirve para con**cat**enar varios archivos y mostrar su contenido, en caso de que se lo ejecute con un archivo solo, muestra su contenido.
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cat access.log
 [2023/10/25:15:42:02] 10.10.120.75 sway.com:443 CONNECT - 200 0 "-"
 [2023/10/25:15:42:02] 10.10.120.75 sway.com:443 GET / 301 492 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
@@ -46,7 +46,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ cat access.log
 
 Sirve para ver los contenidos de un archivo pero de a trozos, ya que `cat` muestra todo el contenido de una.
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ less access.log
 ```
 
@@ -56,7 +56,7 @@ Se utilizan las flechas para desplazarse por las páginas y `q` para salir.
 
 Muestra los contenidos que se encuentran al tope del archivo. Se puede especificar la cantidad de líneas con `-n`.
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ head -n 1 access.log
 [2023/10/25:15:42:02] 10.10.120.75 sway.com:443 CONNECT - 200 0 "-"
 ```
@@ -65,7 +65,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ head -n 1 access.log
 
 A diferencia de `head` muestra los contenidos que se encuentran al final. También se puede usar `-n`.
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ tail -n 1 access.log
 [2023/10/25:16:17:14] 10.10.140.96 storage.live.com:443 GET / 400 630 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
 ```
@@ -74,7 +74,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ tail -n 1 access.log
 
 De **w**ord **c**ount, cuenta la cantidad de líneas, palabras y caracteres dentro del archivo. En este caso nos interesan las líneas, por lo que se va a usar la opción `-l`.
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ wc -l access.log
 49081 access.log
 ```
@@ -83,7 +83,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ wc -l access.log
 
 De **n**umber **l**ines, muestra los contenidos del archivo pero con numeración de líneas.
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ nl access.log
      1  [2023/10/25:15:42:02] 10.10.120.75 sway.com:443 CONNECT - 200 0 "-"
      2  [2023/10/25:15:42:02] 10.10.120.75 sway.com:443 GET / 301 492 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
@@ -95,7 +95,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ nl access.log
 
 Permite cortar las líneas en columnas dado un separador, similar al `split` en varios lenguajes de programación. También tiene la opción `-f` para indicar cuántas columnas se quiere visualizar.
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f1,3,6 access.log
 [2023/10/25:15:42:02] sway.com:443 200
 [2023/10/25:15:42:02] sway.com:443 301
@@ -109,13 +109,13 @@ En este caso estamos viendo tres columnas por línea: la 1, la 3 y la 6.
 
 Es un comando que permite buscar texto en distintos archivos del sistema. La sintaxis es:
 
-```Bash
+```bash
 grep OPCIONES STRING_BUSCADA NOMBRE_ARCHIVO
 ```
 
 Un ejemplo:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ grep 10.10.140.96 access.log
 [2023/10/25:15:46:20] 10.10.140.96 flow.microsoft.com:443 CONNECT - 200 0 "-"
 --- REDACTED FOR BREVITY ---
@@ -125,7 +125,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ grep 10.10.140.96 access.log
 
 Ordena las líneas de un archivo de manera ascendente o descendente. Por defecto lo ordena alfabéticamente, sin embargo si usamos la opción `-n` se ordena numéricamente. Un ejemplo:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort
 account.activedirectory.windowsazure.com
 account.activedirectory.windowsazure.com
@@ -137,7 +137,7 @@ account.activedirectory.windowsazure.com
 
 Elimina los elementos duplicados. **Importante**: siempre es necesario hacer un `sort` primero (o que ya esté ordenado). Un ejemplo:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq
 account.activedirectory.windowsazure.com
 activity.windows.com
@@ -147,7 +147,7 @@ admin.microsoft.com
 
 Mediante la opción `-c` se puede visualizar la cantidad de ocurrencias de cada elemento.
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c
     423 account.activedirectory.windowsazure.com
     184 activity.windows.com
@@ -160,13 +160,13 @@ ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1
 
 Los logs del servidor proxy tienen el siguiente formato:
 
-```Bash
+```bash
 timestamp - source_ip - domain:port - http_method - http_uri - status_code - response_size - user_agent
 ```
 
 Un ejemplo:
 
-```Bash
+```bash
 [2023/10/25:16:17:14] 10.10.140.96 storage.live.com:443 GET / 400 630 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
 ```
 
@@ -193,7 +193,7 @@ En Linux se puede "conectar" dos o más comandos mediante el operador `|`. Su fu
 
 Usamos `grep` y `head` para limitar el número de resultados:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ grep 10.10.140.96 access.log | head -n 5
 [2023/10/25:15:46:20] 10.10.140.96 flow.microsoft.com:443 CONNECT - 200 0 "-"
 [2023/10/25:15:46:20] 10.10.140.96 flow.microsoft.com:443 GET / 307 488 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
@@ -206,7 +206,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ grep 10.10.140.96 access.log | head -n 5
 
 Hacemos uso de `cut` para obtener el dominio y luego quitarle el puerto:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1
 sway.com
 sway.com
@@ -216,7 +216,7 @@ sway.office.com
 
 Luego al mismo comando le agregamos `sort` para ordenarlo y por último `uniq` para quitar duplicados. Quedaría:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq
 account.activedirectory.windowsazure.com
 activity.windows.com
@@ -228,7 +228,7 @@ admin.microsoft.com
 
 Usamos la misma secuencia de comandos del item previo, solamente le agregamos la opción `-c` a `uniq`:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c
     423 account.activedirectory.windowsazure.com
     184 activity.windows.com
@@ -239,7 +239,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1
 
 También podríamos agregarle otro `sort` con la opción `-n` para ordenar las líneas en base al número de ocurrencias:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c | sort -n
      78 partnerservices.getmicrosoftkey.com
     113 **REDACTED**
@@ -253,7 +253,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1
 Ya con todos los comandos explicados se puede empezar la resolución. Nos recomiendan comenzar por obtener los dominios más accedidos por los usuarios y verificar si alguno de ellos es extraño.  
 Podemos utilizar el comando de los ítems previos, recordemos que por defecto se ordena de manera ascendente, por lo que los elementos con más ocurrencias estarían al final. Con el comando `tail` podemos enfocarnos en los últimos:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c | sort -n | tail -n 10
     606 docs.microsoft.com
     622 smtp.office365.com
@@ -269,7 +269,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1
 
 Como se puede ver, la mayoría son de Microsoft menos uno, este dominio sospechoso es el que nos interesa. Vamos a ver las primeras 10 conexiones que tiene:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ grep **SUSPICIOUS DOMAIN** access.log | head -n 5 
 [2023/10/25:15:56:29] REDACTED_IP REDACTED_DOMAIN:80 GET /storage.php?goodies=aWQscmVjaXBpZW50LGdp 200 362 "Go-http-client/1.1"
 [2023/10/25:15:56:29] REDACTED_IP REDACTED_DOMAIN:80 GET /storage.php?goodies=ZnQKZGRiZTlmMDI1OGE4 200 362 "Go-http-client/1.1"
@@ -280,7 +280,7 @@ ubuntu@tryhackme:~/Desktop/artefacts$ grep **SUSPICIOUS DOMAIN** access.log | he
 
 Analizando un poco las líneas podemos ver que hay un parámetro `goodies` con una string extraña. Manipulamos el texto para ver solamente su valor:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ grep **SUSPICIOUS DOMAIN** access.log | cut -d ' ' -f5 | cut -d '=' -f2
 aWQscmVjaXBpZW50LGdp
 ZnQKZGRiZTlmMDI1OGE4
@@ -291,7 +291,7 @@ ZTE3ODUsTm9haCxQbGF5
 
 Parece estar en **base64**. Para decodificarlo hacemos uso del comando `base64` con la opción `-d`:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ grep **SUSPICIOUS DOMAIN** access.log | cut -d ' ' -f5 | cut -d '=' -f2 | base64 -d
 id,recipient,gift
 ddbe9f0258a804c8a15cf524e32e1785,Noah,Play Cash Register
@@ -309,14 +309,14 @@ f706a56dd55c1f2d1d24fbebf3990905,Amelia,Play-Doh Kitchen
 
 ### Direcciones únicas
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f2 access.log | sort -n | uniq | wc -l
 9
 ```
 
 ### Dominios únicos
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq | wc -l
 111
 ```
@@ -325,21 +325,21 @@ ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1
 
 El dominio menos accedido:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c | sort -n | head -n 1
      78 partnerservices.getmicrosoftkey.com
 ```
 
 Para ver el código de estado:
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ grep partnerservices.getmicrosoftkey.com access.log | cut -d ' ' -f6 | sort -n | uniq
 503
 ```
 
 ### Dominio sospechoso
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c | sort -nr | head -n 10
    4992 www.office.com
    4695 login.microsoftonline.com
@@ -357,21 +357,21 @@ El sospechoso sería el único que no termina con `.com`.
 
 ### IP que accede al dominio sospechoso
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f2 | uniq
 10.10.185.225
 ```
 
 ### Cantidad de requests al dominio sospechoso
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f2 | wc -l
 1581
 ```
 
 ### Obteniendo la flag
 
-```Bash
+```bash
 ubuntu@tryhackme:~/Desktop/artefacts$ grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f5 | cut -d '=' -f2 | base64 -d | grep -w "THM"
 72703959c91cb18edbefedc692c45204,SOC Analyst,THM{a_gift_for_you_awesome_analyst!}
 ```
