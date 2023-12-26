@@ -79,9 +79,26 @@ Analizando la ventana de debug vemos que la variable `inv_items` es la que tiene
 
 ### Respuesta
 
-| Información                      | Valor                             |
-| :------------------------------- | :-------------------------------- |
-| Valor de monedas para `4f4f5053` | 1397772111                        |
-| Flag                             | THM{mchoneybell_is_the_real_star} |
+<details>
+<summary>Spoiler</summary>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Información</th>
+      <th style="text-align:center">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">Valor de monedas para <code>4f4f5053</code></td>
+      <td style="text-align:center"><code>1397772111</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Flag</td>
+      <td style="text-align:center"><code>THM{mchoneybell_is_the_real_star}</code></td>
+    </tr>
+  </tbody>
+</table>
+</details>
 
 ### [Volver a inicio](../../README.md)

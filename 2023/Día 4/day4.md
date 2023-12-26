@@ -114,11 +114,26 @@ Donde:
 
 ### Respuesta
 
-Utilizando las credenciales obtenidas ingresamos en la página y buscamos la flag. La información que nos pide THM es:
-
-| Información       | Valor                    |
-| :---------------- | :----------------------- |
-| username:password | isaias:Happiness         |
-| flag              | THM{m3rrY4nt4rct1crAft$} |
+<details>
+<summary>Spoiler</summary>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Información</th>
+      <th style="text-align:center">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">username:password</td>
+      <td style="text-align:center"><code>isaias:Happiness</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Flag</td>
+      <td style="text-align:center"><code>THM{m3rrY4nt4rct1crAft$}</code></td>
+    </tr>
+  </tbody>
+</table>
+</details>
 
 ### [Volver a inicio](../../README.md)

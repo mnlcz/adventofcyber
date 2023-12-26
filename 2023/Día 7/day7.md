@@ -378,14 +378,46 @@ ubuntu@tryhackme:~/Desktop/artefacts$ grep frostlings.bigbadstash.thm access.log
 
 ### Respuesta
 
-| Información                                                    | Valor                                  |
-| :------------------------------------------------------------- | :------------------------------------- |
-| Cantidad de direcciones IP únicas conectadas al servidor proxy | `9`                                    |
-| Cantidad de dominios únicos accedidos por todos los sistemas   | `111`                                  |
-| Código de estado de la request HTTP al dominio menos accedido  | `503`                                  |
-| Nombre del dominio sospechoso                                  | `frostlings.bigbadstash.thm`           |
-| Dirección IP del sistema que accede al dominio sospechoso      | `10.10.185.225`                        |
-| Cantidad de requests al dominio sospechoso                     | `1581`                                 |
-| Flag                                                           | `THM{a_gift_for_you_awesome_analyst!}` |
+<details>
+<summary>Spoiler</summary>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Información</th>
+      <th style="text-align:center">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">Cantidad de direcciones IP únicas conectadas al servidor proxy</td>
+      <td style="text-align:center"><code>9</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Cantidad de dominios únicos accedidos por todos los sistemas</td>
+      <td style="text-align:center"><code>111</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Código de estado de la request HTTP al dominio menos accedido</td>
+      <td style="text-align:center"><code>503</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Nombre del dominio sospechoso</td>
+      <td style="text-align:center"><code>frostlings.bigbadstash.thm</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Dirección IP del sistema que accede al dominio sospechoso</td>
+      <td style="text-align:center"><code>10.10.185.225</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Cantidad de requests al dominio sospechoso</td>
+      <td style="text-align:center"><code>1581</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Flag</td>
+      <td style="text-align:center"><code>THM{a_gift_for_you_awesome_analyst!}</code></td>
+    </tr>
+  </tbody>
+</table>
+</details>
 
 ### [Volver a inicio](../../README.md)

@@ -72,10 +72,31 @@ Acá podemos hacer uso de los previamente mencionados "ataques creativos":
 
 Gracias a los ataques realizados obtuvimos la siguiente información:
 
-| Información        | Valor  |
-| :----------------: | :----: |
-| McGreedy's email   | <t.mcgreedy@antarcticrafts.thm> |
-| IT server password | **BtY2S02** |
-| Secret project     | **Purple Snow** |
+<details>
+<summary>Spoiler</summary>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Información</th>
+      <th style="text-align:center">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">McGreedy's email</td>
+      <td style="text-align:center"><a>t.mcgreedy@antarcticrafts.thm</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">IT server password</td>
+      <td style="text-align:center"><code>BtY2S02</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Secret project</td>
+      <td style="text-align:center"><code>Purple Snow</code></td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
 
 ### [Volver a inicio](../../README.md)

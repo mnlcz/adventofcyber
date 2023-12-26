@@ -59,13 +59,34 @@ Ya con esto podemos volver a ejecutar la herramienta y recuperar la información
 
 ### Respuesta
 
-THM nos pide la siguiente información:
-
-| Información                                    | Valor                     |
-| :--------------------------------------------- | :------------------------ |
-| Tamaño en bytes del archivo `.bak`             | 12704                     |
-| Nombre de la herramienta de recuperación       | BackupMaster 3000         |
-| Bytes mágicos correctos para el archivo `.bak` | 41 43                     |
-| Valor de la flag                               | THM{0LD_5CH00L_C00L_d00D} |
+<details>
+<summary>Spoiler</summary>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Información</th>
+      <th style="text-align:center">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">Tamaño en bytes del archivo <code>.bak</code></td>
+      <td style="text-align:center"><code>12704</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Nombre de la herramienta de recuperación</td>
+      <td style="text-align:center"><code>BackupMaster 3000</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Bytes mágicos correctos para el archivo <code>.bak</code></td>
+      <td style="text-align:center"><code>41 43</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Flag</td>
+      <td style="text-align:center"><code>THM{0LD_5CH00L_C00L_d00D}</code></td>
+    </tr>
+  </tbody>
+</table>
+</details>
 
 ### [Volver a inicio](../../README.md)

@@ -173,18 +173,18 @@ Y responder a las siguientes preguntas:
 2. Dirección IP que envió más tráfico
 3. Protocolo más usado
 
-### Respuestas
+### Código
 
 #### 1
 
 ```python
-df.count() # 100
+df.count()
 ```
 
 #### 2
 
 ```python
-df.groupby(['Source']).size().sort_values(ascending=False) # 10.10.1.4
+df.groupby(['Source']).size().sort_values(ascending=False)
 ```
 
 #### 3
@@ -192,5 +192,33 @@ df.groupby(['Source']).size().sort_values(ascending=False) # 10.10.1.4
 ```python
 df.groupby(['Protocol']).size().sort_values(ascending=False)
 ```
+
+### Respuesta
+
+<details>
+<summary>Spoiler</summary>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Información</th>
+      <th style="text-align:center">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">Paquetes capturados</td>
+      <td style="text-align:center"><code>100</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">IP con más tráfico</td>
+      <td style="text-align:center"><code>10.10.1.4</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Protocolo más frecuente</td>
+      <td style="text-align:center"><code>ICMP</code></td>
+    </tr>
+  </tbody>
+</table>
+</details>
 
 ### [Volver a inicio](../../README.md)

@@ -110,6 +110,26 @@ Donde:
 
 ### Respuestas
 
-Luego de ejecutar hydra obtuvimos el valor del PIN: **6F5**. Y el valor de la flag es: **THM{pin-code-brute-force}**.
+<details>
+<summary>Spoiler</summary>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Información</th>
+      <th style="text-align:center">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">Pin (no pedido)</td>
+      <td style="text-align:center"><code>6F5</code></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">Flag</td>
+      <td style="text-align:center"><code>THM{pin-code-brute-force}</code></td>
+    </tr>
+  </tbody>
+</table>
+</details>
 
 ### [Volver a inicio](../../README.md)
