@@ -84,7 +84,7 @@ Gracias a los ataques realizados obtuvimos la siguiente información:
   <tbody>
     <tr>
       <td style="text-align:center">McGreedy's email</td>
-      <td style="text-align:center"><a>t.mcgreedy@antarcticrafts.thm</a></td>
+      <td style="text-align:center"><code>t.mcgreedy@antarcticrafts.thm</code></td>
     </tr>
     <tr>
       <td style="text-align:center">IT server password</td>
