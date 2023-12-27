@@ -310,15 +310,13 @@ f706a56dd55c1f2d1d24fbebf3990905,Amelia,Play-Doh Kitchen
 ### Direcciones únicas
 
 ```bash
-ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f2 access.log | sort -n | uniq | wc -l
-9
+cut -d ' ' -f2 access.log | sort -n | uniq | wc -l
 ```
 
 ### Dominios únicos
 
 ```bash
-ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq | wc -l
-111
+cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq | wc -l
 ```
 
 ### Código de estado del dominio menos accedido
@@ -326,31 +324,19 @@ ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1
 El dominio menos accedido:
 
 ```bash
-ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c | sort -n | head -n 1
-     78 partnerservices.getmicrosoftkey.com
+cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c | sort -n | head -n 1
 ```
 
 Para ver el código de estado:
 
 ```bash
-ubuntu@tryhackme:~/Desktop/artefacts$ grep partnerservices.getmicrosoftkey.com access.log | cut -d ' ' -f6 | sort -n | uniq
-503
+grep partnerservices.getmicrosoftkey.com access.log | cut -d ' ' -f6 | sort -n | uniq
 ```
 
 ### Dominio sospechoso
 
 ```bash
-ubuntu@tryhackme:~/Desktop/artefacts$ cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c | sort -nr | head -n 10
-   4992 www.office.com
-   4695 login.microsoftonline.com
-   1860 www.globalsign.com
-   1581 frostlings.bigbadstash.thm
-   1554 learn.microsoft.com
-    878 outlook.office365.com
-    850 c.bing.com
-    680 admin.microsoft.com
-    622 smtp.office365.com
-    606 docs.microsoft.com
+cut -d ' ' -f3 access.log | cut -d ':' -f1 | sort | uniq -c | sort -nr | head -n 10
 ```
 
 El sospechoso sería el único que no termina con `.com`.
@@ -358,22 +344,19 @@ El sospechoso sería el único que no termina con `.com`.
 ### IP que accede al dominio sospechoso
 
 ```bash
-ubuntu@tryhackme:~/Desktop/artefacts$ grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f2 | uniq
-10.10.185.225
+grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f2 | uniq
 ```
 
 ### Cantidad de requests al dominio sospechoso
 
 ```bash
-ubuntu@tryhackme:~/Desktop/artefacts$ grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f2 | wc -l
-1581
+grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f2 | wc -l
 ```
 
 ### Obteniendo la flag
 
 ```bash
-ubuntu@tryhackme:~/Desktop/artefacts$ grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f5 | cut -d '=' -f2 | base64 -d | grep -w "THM"
-72703959c91cb18edbefedc692c45204,SOC Analyst,THM{a_gift_for_you_awesome_analyst!}
+grep frostlings.bigbadstash.thm access.log | cut -d ' ' -f5 | cut -d '=' -f2 | base64 -d | grep -w "THM"
 ```
 
 ### Respuesta
