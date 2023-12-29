@@ -1,6 +1,6 @@
 # Advent of Cyber
 
-En este repositorio se encuentran mis notas y apuntes tomados al ir aprendiendo y resolviendo los distintos ejercicios planteados.
+En este repositorio se encuentran mis notas y apuntes tomados al ir aprendiendo y resolviendo los distintos ejercicios planteados. Importante aclarar que empiezo este repo con 0 experiencia en ciberseguridad.
 
 Advent of Cyber es un evento anual creado por [TryHackMe](https://tryhackme.com/), consiste en una serie de ejercicios diarios en los que se aprende sobre ciberseguridad. Es similar al [Advent of Code](https://adventofcode.com/).
 
