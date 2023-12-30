@@ -12,7 +12,6 @@ Ya dejando de lado la historia y entrando en el apartado técnico, en el día de
 
 - Aprender a identificar vulnerabilidades de tipo SQL injection.
 - Aprender a abusar las *stacked queries* para transformar una SQL injection en una *remote code execution*.
-- Aprender a restaurar una página web luego de un ataque.
 
 ## SQL
 
