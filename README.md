@@ -20,4 +20,4 @@ A partir de la siguiente tabla se puede ir viendo los apuntes:
 | [Día 4 ✔](2023/Día%204/day4.md) | [Día 11 ✔](2023/Día%2011/day11.md) | [Día 18 ❌](2023/) |                    |
 | [Día 5 ✔](2023/Día%205/day5.md) | [Día 12 ✔](2023/Día%2012/day12.md) | [Día 19 ❌](2023/) |                    |
 | [Día 6 ✔](2023/Día%206/day6.md) | [Día 13 ✔](2023/Día%2013/day13.md) | [Día 20 ❌](2023/) |                    |
-| [Día 7 ✔](2023/Día%207/day7.md) | [Día 14 ❌](2023/)                  | [Día 21 ❌](2023/) |                    |
+| [Día 7 ✔](2023/Día%207/day7.md) | [Día 14 ✔](2023/Día%2014/day14.md) | [Día 21 ❌](2023/) |                    |
